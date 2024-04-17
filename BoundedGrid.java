@@ -70,6 +70,7 @@ public class BoundedGrid<E>
     {
         //hint:  use the put method to store a null at this location
         return put(loc, null);
+
     }
 
     // Returns a list of all occupied locations in this grid.
