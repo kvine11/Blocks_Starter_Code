@@ -28,43 +28,47 @@ public class Block
 	// Gets the color of this block.
 	public Color getColor()
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		return color;
 	}
 
 	// Sets the color of this block to newColor.
 	public void setColor(Color newColor)
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		color = newColor;
 	}
 
 	// Gets the grid of this block,
 	// or null if this block is not contained in a grid.
 	public BoundedGrid<Block> getGrid()
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		return grid;
 	}
 
 	// Gets the location of this block,
 	// or null if this block is not contained in a grid.
 	public Location getLocation()
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		return location;
 	}
 
 	// Removes this block from its grid.
 	// Precondition:  this block is contained in a grid.
 	public void removeSelfFromGrid()
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		grid.remove(location);
 	}
 
 	// Puts this block into location loc of grid gr.
 	// If there is another block at loc, it is removed.
 	// Precondition:  (1) this block is not contained in a grid.
 	//                (2) loc is valid in gr.
-	public void putSelfInGrid(BoundedGrid<Block> gr, Location loc)
+	public void putSelfInGrid(BoundedGrid<Block> gr, Location loc) //not done yet
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+		if(gr.get(loc) != null)
+		{
+			gr.remove(loc);
+		}
+		gr.put(loc, grid.get(loc));
 	}
 
 	// Moves this block to newLocation.
@@ -73,7 +77,7 @@ public class Block
 	//                (2) newLocation is valid in the grid of this block.
 	public void moveTo(Location newLocation)
 	{
-		throw new RuntimeException("INSERT MISSING CODE HERE");
+
 	}
 
 	// Returns a string with the location and color of this block.
