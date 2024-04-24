@@ -28,34 +28,34 @@ public class Block
 	// Gets the color of this block.
 	public Color getColor()
 	{
-		return color;
+		throw new RuntimeException("ee");
 	}
 
 	// Sets the color of this block to newColor.
 	public void setColor(Color newColor)
 	{
-		color = newColor;
+		throw new RuntimeException("ee");
 	}
 
 	// Gets the grid of this block,
 	// or null if this block is not contained in a grid.
 	public BoundedGrid<Block> getGrid()
 	{
-		return grid;
+		throw new RuntimeException("ee");
 	}
 
 	// Gets the location of this block,
 	// or null if this block is not contained in a grid.
 	public Location getLocation()
 	{
-		return location;
+		throw new RuntimeException("ee");
 	}
 
 	// Removes this block from its grid.
 	// Precondition:  this block is contained in a grid.
 	public void removeSelfFromGrid()
 	{
-		grid.remove(location);
+		throw new RuntimeException("ee");
 	}
 
 	// Puts this block into location loc of grid gr.
@@ -64,11 +64,8 @@ public class Block
 	//                (2) loc is valid in gr.
 	public void putSelfInGrid(BoundedGrid<Block> gr, Location loc) //not done yet
 	{
-		if(gr.get(loc) != null)
-		{
-			gr.remove(loc);
-		}
-		gr.put(loc, grid.get(loc));
+		throw new RuntimeException("ee");
+
 	}
 
 	// Moves this block to newLocation.
@@ -77,6 +74,7 @@ public class Block
 	//                (2) newLocation is valid in the grid of this block.
 	public void moveTo(Location newLocation)
 	{
+		throw new RuntimeException("ee");
 
 	}
 
