@@ -62,10 +62,13 @@ public class Block
 	// If there is another block at loc, it is removed.
 	// Precondition:  (1) this block is not contained in a grid.
 	//                (2) loc is valid in gr.
-	public void putSelfInGrid(BoundedGrid<Block> gr, Location loc) //not done yet
+	public void putSelfInGrid(BoundedGrid<Block> gr, Location loc)
 	{
-		throw new RuntimeException("ee");
-
+		if(gr.get(loc) != null)
+		{
+			gr.remove(loc);
+		}
+		gr.put(loc, this);
 	}
 
 	// Moves this block to newLocation.
