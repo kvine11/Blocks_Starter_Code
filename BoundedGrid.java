@@ -60,7 +60,7 @@ public class BoundedGrid<E>
     public boolean isValid(Location loc)
     {
         //hint:  use getNumRows and getNumCols
-         return getNumRows() > loc.getRow() && getNumCols() > loc.getCol();
+         return (loc.getRow() >= 0 && loc.getRow() < getNumRows()) && (loc.getCol() >= 0 && loc.getCol() < getNumCols());
     }
 
     // Removes the object at location loc from this grid and returns

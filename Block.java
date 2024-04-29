@@ -56,6 +56,8 @@ public class Block
 	public void removeSelfFromGrid()
 	{
 		grid.remove(location);
+		grid = null;
+		location = null;
 	}
 
 	// Puts this block into location loc of grid gr.
@@ -66,9 +68,11 @@ public class Block
 	{
 		if(gr.get(loc) != null)
 		{
-			gr.remove(loc);
+			gr.get(loc).removeSelfFromGrid();
 		}
 		gr.put(loc, this);
+		grid = gr;
+		location = loc;
 	}
 
 	// Moves this block to newLocation.
@@ -77,7 +81,9 @@ public class Block
 	//                (2) newLocation is valid in the grid of this block.
 	public void moveTo(Location newLocation)
 	{
-
+		BoundedGrid<Block> newBlock = grid;
+		removeSelfFromGrid();
+		putSelfInGrid(newBlock, newLocation);
 	}
 
 	// Returns a string with the location and color of this block.
