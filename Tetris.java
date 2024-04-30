@@ -19,7 +19,11 @@ public class Tetris
     // Constructs a Tetris Game
     public Tetris()
     {
-        throw new RuntimeException("INSERT MISSING CODE HERE");
+        grid = new BoundedGrid<Block>(20,10);
+        display = new BlockDisplay(grid);
+        display.setTitle("Tetris");
+        activeTetrad = new Tetrad(grid);
+        display.showBlocks();
     }
 
     // Play the Tetris Game
@@ -73,6 +77,6 @@ public class Tetris
     // Creates and plays the Tetris game.
     public static void main(String[] args)
     {
-        throw new RuntimeException("INSERT MISSING CODE HERE");
+        Tetris game = new Tetris();
     }
 }
