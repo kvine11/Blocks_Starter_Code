@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f61182e0-6223-4cf0-980a-835595556ee4" name="Changes" comment="added putSelf in grid" />
+    <list default="true" id="f61182e0-6223-4cf0-980a-835595556ee4" name="Changes" comment="added up to step 4 in tetris part 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +46,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="blocks" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,9 +69,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.GridMonster.executor": "Run",
+    "Application.Tetris.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "blocks",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/raink/Downloads/Blocks_Starter_Code",
     "project.structure.last.edited": "Project",
@@ -144,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713929951605</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added up to step 4 in tetris part 2">
+      <option name="closed" value="true" />
+      <created>1714450856331</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714450856331</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +224,7 @@
     <MESSAGE value="tetris block class changes" />
     <MESSAGE value="tetris blocks part 1" />
     <MESSAGE value="added putSelf in grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="added putSelf in grid" />
+    <MESSAGE value="added up to step 4 in tetris part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added up to step 4 in tetris part 2" />
   </component>
 </project>
