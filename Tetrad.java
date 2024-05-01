@@ -120,7 +120,25 @@ public class Tetrad
     //						Returns true if successful and false otherwise.
     public boolean translate(int deltaRow, int deltaCol)
     {
-        throw new RuntimeException("INSERT MISSING CODE HERE");
+        BoundedGrid<Block>grid = blocks[0].getGrid();
+        Location [] oldLoc = removeBlocks();
+        Location [] newLoc = new Location[blocks.length];
+        for(int i = 0; i < newLoc.length; i++)
+        {
+            newLoc[i] = new Location(oldLoc[i].getRow() + deltaRow, oldLoc[i].getCol() + deltaCol);
+        }
+        if(areEmpty(grid, newLoc))
+        {
+            addToLocations(grid,newLoc);
+            return true;
+        }
+
+        addToLocations(grid,oldLoc);
+        return false;
+
+
+
+
     }
 
     // Postcondition: Attempts to rotate this tetrad clockwise by 90 degrees
