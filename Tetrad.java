@@ -120,7 +120,7 @@ public class Tetrad
     //						Returns true if successful and false otherwise.
     public boolean translate(int deltaRow, int deltaCol)
     {
-        BoundedGrid<Block>grid = blocks[0].getGrid();
+        BoundedGrid<Block> grid = blocks[0].getGrid();
         Location [] oldLoc = removeBlocks();
         Location [] newLoc = new Location[blocks.length];
         for(int i = 0; i < newLoc.length; i++)
@@ -132,9 +132,13 @@ public class Tetrad
             addToLocations(grid,newLoc);
             return true;
         }
+        else
+        {
+            addToLocations(grid,oldLoc);
+            return false;
+        }
 
-        addToLocations(grid,oldLoc);
-        return false;
+
 
 
 

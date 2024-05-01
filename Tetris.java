@@ -10,7 +10,7 @@
  */
 
 // Represents a Tetris game.
-public class Tetris
+public class Tetris implements ArrowListener
 {
     private BoundedGrid<Block> grid;	// The grid containing the Tetris pieces.
     private BlockDisplay display;		// Displays the grid.
@@ -22,6 +22,7 @@ public class Tetris
         grid = new BoundedGrid<Block>(20,10);
         display = new BlockDisplay(grid);
         display.setTitle("Tetris");
+        display.setArrowListener(this);
         activeTetrad = new Tetrad(grid);
         display.showBlocks();
     }
@@ -78,5 +79,31 @@ public class Tetris
     public static void main(String[] args)
     {
         Tetris game = new Tetris();
+    }
+
+    @Override
+    public void upPressed() {
+        activeTetrad.translate(-1,0);
+        display.showBlocks();
+    }
+
+    @Override
+    public void downPressed() {
+        activeTetrad.translate(1,0);
+        display.showBlocks();
+    }
+
+    @Override
+    public void leftPressed() {
+        activeTetrad.translate(0,-1);
+        display.showBlocks();
+
+    }
+
+    @Override
+    public void rightPressed() {
+        activeTetrad.translate(0,1);
+        display.showBlocks();
+
     }
 }
