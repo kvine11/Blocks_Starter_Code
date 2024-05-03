@@ -150,7 +150,26 @@ public class Tetrad
     //                Returns true if successful and false otherwise.
     public boolean rotate()
     {
-        throw new RuntimeException("INSERT MISSING CODE HERE");
+
+        BoundedGrid<Block> grid = blocks[0].getGrid();
+        Location [] oldLoc = removeBlocks();
+        Location [] newLoc = new Location[blocks.length];
+        for(int i = 0; i < newLoc.length; i++)
+        {
+            int rowPrime = oldLoc[i].getRow();
+            int colPrime = oldLoc[i].getCol();
+            newLoc[i] = new Location(oldLoc[0].getRow() - oldLoc[0].getCol() + colPrime, oldLoc[0].getRow() + oldLoc[0].getCol() - rowPrime);
+        }
+        if(areEmpty(grid, newLoc))
+        {
+            addToLocations(grid,newLoc);
+            return true;
+        }
+        else
+        {
+            addToLocations(grid,oldLoc);
+            return false;
+        }
     }
 
 

@@ -78,12 +78,13 @@ public class Tetris implements ArrowListener
     // Creates and plays the Tetris game.
     public static void main(String[] args)
     {
+
         Tetris game = new Tetris();
     }
 
     @Override
     public void upPressed() {
-        activeTetrad.translate(-1,0);
+        activeTetrad.rotate();
         display.showBlocks();
     }
 
