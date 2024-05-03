@@ -30,7 +30,12 @@ public class Tetris implements ArrowListener
     // Play the Tetris Game
     public void play()
     {
-        throw new RuntimeException("INSERT MISSING CODE HERE");
+        boolean play = true;
+        while(activeTetrad.translate(1,0))
+        {
+            sleep(1);
+            display.showBlocks();
+        }
     }
 
 
@@ -78,8 +83,8 @@ public class Tetris implements ArrowListener
     // Creates and plays the Tetris game.
     public static void main(String[] args)
     {
-
         Tetris game = new Tetris();
+        game.play();
     }
 
     @Override
