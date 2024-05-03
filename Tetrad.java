@@ -20,7 +20,7 @@ public class Tetrad
     public Tetrad(BoundedGrid<Block> grid)
     {
         int num = (int)(Math.random() * 7) + 0;
-        if(num == 0)
+        if(num == 0) //horizontal line
         {
             blocks = new Block[4];
             Color color;
@@ -33,11 +33,11 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else if(num == 1)
+        else if(num == 1) //t sign
         {
             blocks = new Block[4];
             Color color;
-            Location [] locs = {new Location(0,3), new Location(0,4), new Location(0,5), new Location(1,4)};
+            Location [] locs = {new Location(0,4), new Location(0,3), new Location(0,5), new Location(1,4)};
             color = Color.GRAY;
             for(int i = 0; i < blocks.length; i++)
             {
@@ -46,7 +46,7 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else if(num == 2)
+        else if(num == 2) //square
         {
             blocks = new Block[4];
             Color color;
@@ -59,7 +59,7 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else if(num == 3)
+        else if(num == 3) //right L
         {
             blocks = new Block[4];
             Color color;
@@ -72,7 +72,7 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else if(num == 4)
+        else if(num == 4) //left L
         {
             blocks = new Block[4];
             Color color;
@@ -85,7 +85,7 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else if(num == 5)
+        else if(num == 5) //s shape
         {
             blocks = new Block[4];
             Color color;
@@ -98,7 +98,7 @@ public class Tetrad
             }
             addToLocations(grid, locs);
         }
-        else
+        else //z shape
         {
             blocks = new Block[4];
             Color color;
